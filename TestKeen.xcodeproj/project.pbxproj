@@ -22,6 +22,8 @@
 		42E45D7919A3B42800459AB6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E45D5819A3B42800459AB6 /* UIKit.framework */; };
 		42E45D8119A3B42800459AB6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 42E45D7F19A3B42800459AB6 /* InfoPlist.strings */; };
 		42E45D8319A3B42800459AB6 /* TestKeenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E45D8219A3B42800459AB6 /* TestKeenTests.m */; };
+		42E45D9119A3B47900459AB6 /* libKeenClient-Aggregate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E45D9019A3B47900459AB6 /* libKeenClient-Aggregate.a */; };
+		42E45D9319A3B49400459AB6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E45D9219A3B49400459AB6 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,11 @@
 		42E45D7E19A3B42800459AB6 /* TestKeenTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestKeenTests-Info.plist"; sourceTree = "<group>"; };
 		42E45D8019A3B42800459AB6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		42E45D8219A3B42800459AB6 /* TestKeenTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestKeenTests.m; sourceTree = "<group>"; };
+		42E45D8D19A3B47900459AB6 /* KeenClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeenClient.h; sourceTree = "<group>"; };
+		42E45D8E19A3B47900459AB6 /* KeenProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeenProperties.h; sourceTree = "<group>"; };
+		42E45D8F19A3B47900459AB6 /* KIOEventStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KIOEventStore.h; sourceTree = "<group>"; };
+		42E45D9019A3B47900459AB6 /* libKeenClient-Aggregate.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libKeenClient-Aggregate.a"; sourceTree = "<group>"; };
+		42E45D9219A3B49400459AB6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +69,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42E45D9319A3B49400459AB6 /* CoreLocation.framework in Frameworks */,
 				42E45D5719A3B42800459AB6 /* CoreGraphics.framework in Frameworks */,
+				42E45D9119A3B47900459AB6 /* libKeenClient-Aggregate.a in Frameworks */,
 				42E45D5919A3B42800459AB6 /* UIKit.framework in Frameworks */,
 				42E45D5519A3B42800459AB6 /* Foundation.framework in Frameworks */,
 			);
@@ -103,6 +112,8 @@
 		42E45D5319A3B42800459AB6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				42E45D9219A3B49400459AB6 /* CoreLocation.framework */,
+				42E45D8C19A3B47900459AB6 /* KeenClient */,
 				42E45D5419A3B42800459AB6 /* Foundation.framework */,
 				42E45D5619A3B42800459AB6 /* CoreGraphics.framework */,
 				42E45D5819A3B42800459AB6 /* UIKit.framework */,
@@ -153,6 +164,17 @@
 				42E45D7F19A3B42800459AB6 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		42E45D8C19A3B47900459AB6 /* KeenClient */ = {
+			isa = PBXGroup;
+			children = (
+				42E45D8D19A3B47900459AB6 /* KeenClient.h */,
+				42E45D8E19A3B47900459AB6 /* KeenProperties.h */,
+				42E45D8F19A3B47900459AB6 /* KIOEventStore.h */,
+				42E45D9019A3B47900459AB6 /* libKeenClient-Aggregate.a */,
+			);
+			path = KeenClient;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,6 +416,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestKeen/TestKeen-Prefix.pch";
 				INFOPLIST_FILE = "TestKeen/TestKeen-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/KeenClient",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -407,6 +434,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestKeen/TestKeen-Prefix.pch";
 				INFOPLIST_FILE = "TestKeen/TestKeen-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/KeenClient",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

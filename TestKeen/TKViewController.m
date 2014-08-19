@@ -7,6 +7,7 @@
 //
 
 #import "TKViewController.h"
+#import "KeenClient.h"
 
 @interface TKViewController ()
 
@@ -18,6 +19,19 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    NSLog(@"view did load");
+    
+    // We want to track page view event only once
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(logPageView)
+                                                 name:UIApplicationDidBecomeActiveNotification
+                                               object:nil];
+}
+
+- (void) logPageView
+{
+    NSDictionary *event = [NSDictionary dictionaryWithObjectsAndKeys:@"some view", @"view_name", @"going to", @"action", nil];
+    [[KeenClient sharedClient] addEvent:event toEventCollection:@"page_views" error:nil];
 }
 
 - (void)didReceiveMemoryWarning
