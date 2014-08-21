@@ -22,10 +22,10 @@
     NSLog(@"view did load");
     
     // We want to track page view event only once
-    [[NSNotificationCenter defaultCenter] addObserver:self
+    /*[[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(logPageView)
                                                  name:UIApplicationDidBecomeActiveNotification
-                                               object:nil];
+                                               object:nil];*/
 }
 
 - (void) logPageView

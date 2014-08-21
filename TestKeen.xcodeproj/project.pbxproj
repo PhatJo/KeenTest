@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4202488619A670B4003FFDF3 /* TKAnalyticsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4202488519A670B4003FFDF3 /* TKAnalyticsManager.m */; };
 		42E45D5519A3B42800459AB6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E45D5419A3B42800459AB6 /* Foundation.framework */; };
 		42E45D5719A3B42800459AB6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E45D5619A3B42800459AB6 /* CoreGraphics.framework */; };
 		42E45D5919A3B42800459AB6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E45D5819A3B42800459AB6 /* UIKit.framework */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4202488419A670B4003FFDF3 /* TKAnalyticsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKAnalyticsManager.h; sourceTree = "<group>"; };
+		4202488519A670B4003FFDF3 /* TKAnalyticsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKAnalyticsManager.m; sourceTree = "<group>"; };
 		42E45D5119A3B42800459AB6 /* TestKeen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestKeen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E45D5419A3B42800459AB6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		42E45D5619A3B42800459AB6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -127,6 +130,8 @@
 			children = (
 				42E45D6319A3B42800459AB6 /* TKAppDelegate.h */,
 				42E45D6419A3B42800459AB6 /* TKAppDelegate.m */,
+				4202488419A670B4003FFDF3 /* TKAnalyticsManager.h */,
+				4202488519A670B4003FFDF3 /* TKAnalyticsManager.m */,
 				42E45D6619A3B42800459AB6 /* Main_iPhone.storyboard */,
 				42E45D6919A3B42800459AB6 /* Main_iPad.storyboard */,
 				42E45D6C19A3B42800459AB6 /* TKViewController.h */,
@@ -277,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42E45D6E19A3B42800459AB6 /* TKViewController.m in Sources */,
+				4202488619A670B4003FFDF3 /* TKAnalyticsManager.m in Sources */,
 				42E45D6119A3B42800459AB6 /* main.m in Sources */,
 				42E45D6519A3B42800459AB6 /* TKAppDelegate.m in Sources */,
 			);
@@ -370,6 +376,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "98a16a7c-b0da-406f-adf9-b594a1f2c27e";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -402,6 +409,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PROVISIONING_PROFILE = "98a16a7c-b0da-406f-adf9-b594a1f2c27e";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -503,6 +511,7 @@
 				42E45D8819A3B42800459AB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		42E45D8919A3B42800459AB6 /* Build configuration list for PBXNativeTarget "TestKeenTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +520,7 @@
 				42E45D8B19A3B42800459AB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
